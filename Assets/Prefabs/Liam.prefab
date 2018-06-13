@@ -729,6 +729,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4841250518234636}
+  - component: {fileID: 64508752592116790}
   m_Layer: 0
   m_Name: Skis
   m_TagString: Untagged
@@ -1286,9 +1287,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1450526202166106}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.691792, y: 15.311966, z: 1.1836584}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.7773434, z: -0, w: 0.6290765}
+  m_LocalPosition: {x: 4.5329, y: 19.929, z: 28.005}
+  m_LocalScale: {x: 0.0969764, y: 0.0969764, z: 0.0969764}
   m_Children:
   - {fileID: 4233125466487974}
   - {fileID: 4168431244786402}
@@ -1296,7 +1297,7 @@ Transform:
   - {fileID: 4704669997313258}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -102.036, z: 0}
 --- !u!4 &4104195328174044
 Transform:
   m_ObjectHideFlags: 1
@@ -2444,7 +2445,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1450526202166106}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 80
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2452,6 +2453,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64508752592116790
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1632322923548872}
+  m_Material: {fileID: 13400000, guid: 534967efaeb471c42bff19f6781d8290, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!65 &65609757557442916
 BoxCollider:
   m_ObjectHideFlags: 1
