@@ -38,12 +38,12 @@ public class PlayerController : MonoBehaviour
     public Rect LeftControlSurface = new Rect(0, 0, Screen.width / 5, Screen.height);
     //add the right side (figure it out)
 
-    float thrust = 50;
+    public float thrust = 50;
     public Rigidbody testPush;
 
     private void Awake()
     {
-        testPush = GetComponent<Rigidbody>();
+        
     }
     void Update()
     {

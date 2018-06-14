@@ -1822,6 +1822,7 @@ MonoBehaviour:
     y: 0
     width: 74
     height: 627
+  thrust: 4000
   testPush: {fileID: 598379963}
 --- !u!4 &603644102 stripped
 Transform:
