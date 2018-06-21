@@ -4,22 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-/*
+
 public class PlayerController : MonoBehaviour
 {
-    public Rect LeftControlSurface = new Rect(0, 0, Screen.width / 5, Screen.height);
+    
+    Rect LeftControlSurface = new Rect(0, 0, Screen.width / 5, Screen.height);
     //add the right side (figure it out)
-
+   
     public float thrust = 50;
+    public float stabilizer = 100;
     public Rigidbody testPush;
+    public float twistForce = 500;
 
     private void Awake()
     {
         
     }
-    void Update()
+    void FixedUpdate()
     {
         testPush.AddForce(transform.forward * thrust);
+        testPush.AddForce(0, stabilizer, 0);
 
         if (Input.touchCount > 0) //check amount of touches
         {
@@ -31,12 +35,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 }
-    
-*/
 
 
-
-
+/*
 using UnityEngine;
 using System.Collections;
 
@@ -63,3 +64,5 @@ public class ExampleClass : MonoBehaviour
     }
 
 }
+*/
+

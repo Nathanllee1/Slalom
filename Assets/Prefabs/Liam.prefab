@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 4094635531618682}
   - component: {fileID: 95857655409048696}
   - component: {fileID: 54969868321608324}
-  - component: {fileID: 114841252117761174}
+  - component: {fileID: 114905010529401526}
   m_Layer: 0
   m_Name: Liam
   m_TagString: Untagged
@@ -1289,7 +1289,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1450526202166106}
   m_LocalRotation: {x: -0, y: -0.7773434, z: -0, w: 0.6290765}
-  m_LocalPosition: {x: 10.43, y: 16.93, z: 2.64}
+  m_LocalPosition: {x: 10.85, y: 17.47, z: 2.64}
   m_LocalScale: {x: 0.0969764, y: 0.0969764, z: 0.0969764}
   m_Children:
   - {fileID: 4233125466487974}
@@ -2538,17 +2538,6 @@ MonoBehaviour:
   cameraMoveSpeed_x: 0
   cameraMoveSpeed_y: 0.05
   cameraMoveSpeed_z: 0.05
---- !u!114 &114841252117761174
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1450526202166106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad45ac8e909ed240afaee88f55f0983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114870025449068434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2560,6 +2549,25 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114905010529401526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1450526202166106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad45ac8e909ed240afaee88f55f0983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftControlSurface:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 74
+    height: 627
+  thrust: 200
+  testPush: {fileID: 54969868321608324}
 --- !u!124 &124581024390535028
 Behaviour:
   m_ObjectHideFlags: 1
