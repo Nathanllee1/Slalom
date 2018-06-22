@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Person.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PersonTest.unity
     guid: 249343e25015ce447904b6cfa273a1a2
+  - enabled: 1
+    path: Assets/BoughtAssets/Low Poly Trees Pack/Demo/Demo_Scenes/Demo_07.unity
+    guid: e0116200ed90c4145b409fa9b82a189b
   m_configObjects: {}
