@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         //Liam.AddForce(transform.forward * thrust);
         //Liam.AddForce(0, stabilizer, 0);
-
+        //Liam.AddTorque(-transform.right * twistSpeed);
         Liam.AddForce(transform.forward * testboost);
 
         if (Input.touchCount > 0) //check amount of touches
