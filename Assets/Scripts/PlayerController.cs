@@ -39,21 +39,24 @@ public class PlayerController : MonoBehaviour
         //Liam.AddTorque(-transform.right * twistSpeed);
         Liam.AddForce(transform.forward * testboost);
 
+        
+
+
         if (Input.touchCount > 0) //check amount of touches
         {
-            Liam.AddTorque(-transform.right * twistSpeed);
+            //Liam.AddTorque(-transform.right * twistSpeed);
 
             Touch touch = Input.GetTouch(0);
             if (LeftControlSurface.Contains(touch.position))
             {
-                Liam.AddTorque(-transform.right * twistSpeed);
+                Liam.AddTorque(-transform.up * twistSpeed);
                 Debug.Log("Left");
             }
             if (RightControlSurface.Contains(touch.position))
             {
                 //Liam.AddForce(1, 4, thrust, ForceMode.Impulse);
                 //transform.Rotate(Vector3.right * Time.deltaTime * twistSpeed);
-                Liam.AddTorque(transform.right * twistSpeed);
+                Liam.AddTorque(transform.up * twistSpeed);
                 Debug.Log("Right");
             }
         }
