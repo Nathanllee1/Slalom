@@ -24,13 +24,14 @@ public class PlayerController : MonoBehaviour
 
     private Rect LeftControlSurface;
     private Rect RightControlSurface;
+    private float ControlOffTime;
 
     private void Awake()
     {
         Liam = GetComponent<Rigidbody>();
-        Debug.Log("DebugLog");
-        Rect LeftControlSurface = new Rect(0, 0, Screen.width / 2, Screen.height);
-        Rect RightControlSurface = new Rect(Screen.width / 2, 0, Screen.width / 2, Screen.height);
+        Debug.Log("Yes");
+        LeftControlSurface = new Rect(0, 0, Screen.width / 2, Screen.height);
+        RightControlSurface = new Rect(Screen.width / 2, 0, Screen.width / 2, Screen.height);
     }
     void Update()
     {
@@ -39,9 +40,6 @@ public class PlayerController : MonoBehaviour
         //Liam.AddTorque(-transform.right * twistSpeed);
         Liam.AddForce(transform.forward * testboost);
 
-        
-
-
         if (Input.touchCount > 0) //check amount of touches
         {
             //Liam.AddTorque(-transform.right * twistSpeed);
@@ -49,14 +47,15 @@ public class PlayerController : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             if (LeftControlSurface.Contains(touch.position))
             {
-                Liam.AddTorque(-transform.up * twistSpeed);
+                Liam.AddTorque(transform.right * twistSpeed);
                 Debug.Log("Left");
+                if 
             }
             if (RightControlSurface.Contains(touch.position))
             {
                 //Liam.AddForce(1, 4, thrust, ForceMode.Impulse);
                 //transform.Rotate(Vector3.right * Time.deltaTime * twistSpeed);
-                Liam.AddTorque(transform.up * twistSpeed);
+                Liam.AddTorque(-transform.right * twistSpeed);
                 Debug.Log("Right");
             }
         }
