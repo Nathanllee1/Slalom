@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
             {
                 //Liam.AddForce(1, 4, thrust, ForceMode.Impulse);
                 //transform.Rotate(Vector3.right * Time.deltaTime * twistSpeed);
-                float v = Input.GetAxis("Vertical") * twistSpeed * Time.deltaTime;
+                //float v = Input.GetAxis("Vertical") * twistSpeed * Time.deltaTime;
                 Liam.AddTorque(0, twistSpeed, 0);
                 Debug.Log("Right");
             }
