@@ -490,7 +490,6 @@ GameObject:
   - component: {fileID: 95857655409048696}
   - component: {fileID: 54969868321608324}
   - component: {fileID: 114905010529401526}
-  - component: {fileID: 75178353499869688}
   m_Layer: 0
   m_Name: Liam
   m_TagString: Untagged
@@ -2493,17 +2492,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!75 &75178353499869688
-ConstantForce:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1450526202166106}
-  m_Enabled: 1
-  m_Force: {x: 0, y: 0, z: 0}
-  m_RelativeForce: {x: 0, y: 0, z: 0}
-  m_Torque: {x: 0, y: 0, z: 0}
-  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!81 &81066617946529890
 AudioListener:
   m_ObjectHideFlags: 1

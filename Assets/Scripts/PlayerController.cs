@@ -8,10 +8,6 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     
-    
-    
-   
-    
     public float stabilizer = 100;
     public Rigidbody Liam;
     public float twistSpeed = 5;
@@ -49,7 +45,7 @@ public class PlayerController : MonoBehaviour
             {
                 Liam.AddTorque(transform.right * twistSpeed);
                 Debug.Log("Left");
-                if 
+                
             }
             if (RightControlSurface.Contains(touch.position))
             {
