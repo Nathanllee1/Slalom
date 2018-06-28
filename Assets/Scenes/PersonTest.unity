@@ -1781,35 +1781,52 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4094635531618682, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.847
+      value: 4.1639667
       objectReference: {fileID: 0}
     - target: {fileID: 4094635531618682, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 12.714
+      value: 5.98951
       objectReference: {fileID: 0}
     - target: {fileID: 4094635531618682, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 11.35
+      value: 16.153015
       objectReference: {fileID: 0}
     - target: {fileID: 4094635531618682, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.30718562
+      value: 0.16886522
       objectReference: {fileID: 0}
     - target: {fileID: 4094635531618682, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.45180735
+      value: -0.016095834
       objectReference: {fileID: 0}
     - target: {fileID: 4094635531618682, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.24596642
+      value: 0.0935124
       objectReference: {fileID: 0}
     - target: {fileID: 4094635531618682, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.8006296
+      value: 0.98106116
       objectReference: {fileID: 0}
     - target: {fileID: 4094635531618682, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114905010529401526, guid: 8ca50e0d9d5b73849bd708c6c30c8610,
+        type: 2}
+      propertyPath: twistSpeed
+      value: 8000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094635531618682, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 19.533
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094635531618682, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094635531618682, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 10.89
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 75178353499869688, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
