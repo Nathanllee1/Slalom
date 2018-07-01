@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     //change aspects of control
     public float stabilizer = 100;
     public float twistSpeed = 5;
-    public float testboost = 200;
     public float swipeForce = 20;
 
     //translate to force
@@ -86,7 +85,7 @@ public class PlayerController : MonoBehaviour
                 if (LeftControlSurface.Contains(touch.position))
                 {
 
-                    Liam.AddTorque(0, -twistSpeed, 0);
+                    Liam.AddTorque(0, twistSpeed, 0);
                     Debug.Log("Left" + "Strength = " + forwardForce + "Speed = " + speed + "Distance = " + DragDistance);
                     Liam.AddForce(transform.forward * forwardForce);
                     //stick animation and sound here
@@ -94,26 +93,12 @@ public class PlayerController : MonoBehaviour
                 if (RightControlSurface.Contains(touch.position))
                 {
 
-                    Liam.AddTorque(0, twistSpeed, 0);
+                    Liam.AddTorque(0, -twistSpeed, 0);
                     Debug.Log("Right" + "Strength = " + forwardForce + "Speed = " + speed + "Distance = " + DragDistance);
                     Liam.AddForce(transform.forward * forwardForce);
                 }
-
-           
             }
         }
-
     }
 }
 
-/*
-if (diffTime != 0)
-            {
-                
-            }
-
-            if (speed != Vector2.zero)
-            {
-                Debug.Log("startTime / diffTime = " + startTime + "/" + diffTime);
-            }
-*/

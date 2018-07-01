@@ -283,6 +283,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114905010529401526, guid: 8ca50e0d9d5b73849bd708c6c30c8610,
+        type: 2}
+      propertyPath: swipeForce
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
   m_IsPrefabParent: 0

@@ -1299,6 +1299,23 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 422166, guid: e020ba20c49661149a4f7bc6740c3c68, type: 2}
   m_PrefabInternal: {fileID: 1014367205}
+--- !u!1 &1213899964 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1174351844058098, guid: 8ca50e0d9d5b73849bd708c6c30c8610,
+    type: 2}
+  m_PrefabInternal: {fileID: 1368434795}
+--- !u!114 &1213899970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1213899964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 44fe81d67d20dd949b60cebb1c51b8e1, type: 2}
 --- !u!4 &1237376728 stripped
 Transform:
   m_PrefabParentObject: {fileID: 402994, guid: c01161af64a1afc408985baa16da16b4, type: 2}
@@ -1468,7 +1485,7 @@ Prefab:
     - target: {fileID: 114905010529401526, guid: 8ca50e0d9d5b73849bd708c6c30c8610,
         type: 2}
       propertyPath: swipeForce
-      value: 0.2
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4099672825844144, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1486,6 +1503,11 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114905010529401526, guid: 8ca50e0d9d5b73849bd708c6c30c8610,
+        type: 2}
+      propertyPath: twistSpeed
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114653872855050672, guid: 8ca50e0d9d5b73849bd708c6c30c8610, type: 2}
