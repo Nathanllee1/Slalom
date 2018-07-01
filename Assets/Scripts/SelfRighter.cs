@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SelfRighter : MonoBehaviour {
 
-    public Transform transform;
+    public Transform target;
     public float RightSpeed = 40;
 
 	// Use this for initialization
