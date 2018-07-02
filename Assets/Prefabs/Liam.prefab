@@ -1290,7 +1290,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1450526202166106}
   m_LocalRotation: {x: 0.16886522, y: -0.016095834, z: 0.0935124, w: 0.98106116}
-  m_LocalPosition: {x: -0.44, y: 4.79, z: 10.75}
+  m_LocalPosition: {x: -0.8968754, y: 4.8956785, z: 9.054577}
   m_LocalScale: {x: 0.0969764, y: 0.0969764, z: 0.0969764}
   m_Children:
   - {fileID: 4233125466487974}
@@ -2536,6 +2536,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2b7f494179dcf4fbde6d26f3747895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  height: 5
+  distanceBack: -10
   target: {fileID: 4094635531618682}
   smoothTime: 0.3
 --- !u!114 &114653872855050672
@@ -2563,10 +2565,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad45ac8e909ed240afaee88f55f0983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stabilizer: 0
   Liam: {fileID: 54969868321608324}
+  stabilizer: 0
   twistSpeed: 150
-  testboost: 8000
+  swipeForce: 20
 --- !u!114 &114967314968251972
 MonoBehaviour:
   m_ObjectHideFlags: 1
