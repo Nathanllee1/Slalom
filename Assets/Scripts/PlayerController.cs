@@ -14,15 +14,16 @@ public class PlayerController : MonoBehaviour
     //change aspects of control
     public float stabilizer = 100;
     public float twistSpeed = 5;
+    public float swipeTwistSpeed = 5;
     public float swipeForce = 20;
 
     //translate to force
     private float forwardForce;
+    public float swipeOrTap = 440;
 
     //control surfaces
     private Rect LeftControlSurface;
     private Rect RightControlSurface;
-
 
     //swipe
     private Vector2 startPos;
@@ -31,8 +32,11 @@ public class PlayerController : MonoBehaviour
     private float startTime;
     private Vector2 DragDistance;
     private float speed;
-    
 
+    //detection
+    private bool swipeTap;
+    private bool upDown;
+    
 
 
 
@@ -42,7 +46,6 @@ public class PlayerController : MonoBehaviour
         LeftControlSurface = new Rect(0, 0, Screen.width / 2, Screen.height);
         RightControlSurface = new Rect(Screen.width / 2, 0, Screen.width / 2, Screen.height);
     }
-
 
     void Update()
     {
@@ -80,6 +83,15 @@ public class PlayerController : MonoBehaviour
 
 
                 //Implement it all
+
+                
+                //Check if it's a swipe or a tap
+                if (DragDistance < swipeOrTap)
+                {
+                    twistSpeed = swipeTwistSpeed;
+                }
+              
+
 
                 //Touch touch = Input.GetTouch(0);
                 if (LeftControlSurface.Contains(touch.position))
