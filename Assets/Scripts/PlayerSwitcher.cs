@@ -9,10 +9,10 @@ public class PlayerSwitcher : MonoBehaviour {
     public GameObject skiing;
 
     //GUI button
-    //public static bool Button()
+    public Texture btnTexture;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
 		
 	}

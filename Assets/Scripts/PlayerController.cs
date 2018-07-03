@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     //general
     public Rigidbody Liam;
+    private Touch touches;
 
 
     //change aspects of control
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
     private float speed;
 
     //detection
-    private bool swipeTap;
+    private bool Swipe;
     private bool upDown;
     
 
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
         Liam = GetComponent<Rigidbody>();
         LeftControlSurface = new Rect(0, 0, Screen.width / 2, Screen.height);
         RightControlSurface = new Rect(Screen.width / 2, 0, Screen.width / 2, Screen.height);
+        Touch touch = Input.GetTouch(0);
     }
 
     void Update()
@@ -89,28 +91,55 @@ public class PlayerController : MonoBehaviour
                 if (DragDistance < swipeOrTap)
                 {
                     twistSpeed = swipeTwistSpeed;
+                    Swipe = true;
                 }
-              
-
 
                 //Touch touch = Input.GetTouch(0);
-                if (LeftControlSurface.Contains(touch.position))
-                {
+                
+            }
+        
+        }
+    }
+    void swipeToForce()
+    {
+        foreach (Touch touch in Input.touches)
+        {
+            if (LeftControlSurface.Contains(touch.position))
+            {
 
-                    Liam.AddTorque(0, twistSpeed, 0);
-                    Debug.Log("Left" + "Strength = " + forwardForce + "Speed = " + speed + "Distance = " + DragDistance);
-                    Liam.AddForce(transform.forward * forwardForce);
-                    //stick animation and sound here
-                }
-                if (RightControlSurface.Contains(touch.position))
-                {
+                Liam.AddTorque(0, twistSpeed, 0);
+                Debug.Log("Left" + "Strength = " + forwardForce + " Speed = " + speed + " Distance = " + DragDistance + " Time = " + diffTime);
+                Liam.AddForce(transform.forward * forwardForce);
+                //stick animation and sound here
+            }
+            if (RightControlSurface.Contains(touch.position))
+            {
 
-                    Liam.AddTorque(0, -twistSpeed, 0);
-                    Debug.Log("Right" + "Strength = " + forwardForce + "Speed = " + speed + "Distance = " + DragDistance);
-                    Liam.AddForce(transform.forward * forwardForce);
-                }
+                Liam.AddTorque(0, -twistSpeed, 0);
+                Debug.Log("Right" + " Strength = " + forwardForce + " Speed = " + speed + " Distance = " + DragDistance + " Time = " + diffTime);
+                Liam.AddForce(transform.forward * forwardForce);
             }
         }
     }
 }
+/*
+void touchController()
+{
+    //Touch touch = Input.GetTouch(0);
+    if (LeftControlSurface.Contains(touch.position))
+    {
 
+        Liam.AddTorque(0, twistSpeed, 0);
+        Debug.Log("Left" + "Strength = " + forwardForce + " Speed = " + speed + " Distance = " + DragDistance + " Time = " + diffTime);
+        Liam.AddForce(transform.forward * forwardForce);
+        //stick animation and sound here
+    }
+    if (RightControlSurface.Contains(touch.position))
+    {
+
+        Liam.AddTorque(0, -twistSpeed, 0);
+        Debug.Log("Right" + " Strength = " + forwardForce + " Speed = " + speed + " Distance = " + DragDistance + " Time = " + diffTime);
+        Liam.AddForce(transform.forward * forwardForce);
+    }
+}
+*/
