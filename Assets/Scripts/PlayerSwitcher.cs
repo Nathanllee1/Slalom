@@ -11,6 +11,11 @@ public class PlayerSwitcher : MonoBehaviour {
     //GUI button
     public Texture btnTexture;
 
+
+    //Public Variable
+    public string LiamState;
+
+
     // Use this for initialization
     void Start ()
     {
@@ -21,6 +26,8 @@ public class PlayerSwitcher : MonoBehaviour {
 	void Update ()
     {
         if (GUI.Button(new Rect(10, 70, 50, 30), "Click"))
-            Debug.Log("Clicked the button with text");
+            Debug.Log("Clicked the button with text"); //switch
     }
+
+    //add autoswitcher for gliding
 }
