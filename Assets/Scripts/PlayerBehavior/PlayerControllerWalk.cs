@@ -16,6 +16,6 @@ public class PlayerControllerWalk : MonoBehaviour {
 
     void CheckState ()
     {
-        if LiamState = walk{ }
+      //  if LiamState = walk{ }
     }
 }
