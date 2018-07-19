@@ -1265,8 +1265,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1280480283301882}
-  m_LocalRotation: {x: 0.03931061, y: -0.01946212, z: 0.23006457, w: 0.9721863}
-  m_LocalPosition: {x: -0.014801025, y: -0.3541088, z: -0.17371333}
+  m_LocalRotation: {x: 0.30754355, y: -0.08253956, z: 0.21562867, w: 0.92309725}
+  m_LocalPosition: {x: -4129.781, y: 6733, z: -1746.4783}
   m_LocalScale: {x: 0.0969764, y: 0.0969764, z: 0.0969764}
   m_Children:
   - {fileID: 4862681931107494}
@@ -1275,7 +1275,7 @@ Transform:
   - {fileID: 4327986450526244}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 4.8980002, y: 718.864, z: 26.579}
+  m_LocalEulerAnglesHint: {x: 37.112003, y: 718.581, z: 25.820002}
 --- !u!4 &4062949967742224
 Transform:
   m_ObjectHideFlags: 1
@@ -1591,7 +1591,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1322995745549228}
   m_LocalRotation: {x: 0.15991391, y: 0.048598148, z: -0.007882648, w: 0.9859024}
-  m_LocalPosition: {x: 0, y: 8, z: -13}
+  m_LocalPosition: {x: 0, y: 9, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4054710680936514}
@@ -2538,9 +2538,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Liam: {fileID: 54708557783157294}
   stabilizer: 0
-  twistSpeed: 150
+  twistSpeed: 4
   swipeTwistSpeed: 40
-  swipeForce: 0.09
+  swipeForce: 0.02
+  swipeOrTap: 440
+  testBoost: 0
 --- !u!114 &114157261573778902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2579,7 +2581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2b7f494179dcf4fbde6d26f3747895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 8
+  height: 9
   distanceBack: 13
   target: {fileID: 4054710680936514}
   smoothTime: 0.3

@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/BoughtAssets/Low Poly Trees Pack/Demo/Demo_Scenes/Demo_07.unity
     guid: e0116200ed90c4145b409fa9b82a189b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RealMap.unity
     guid: 6d5535d9585fa72449fcf5f1fede54d2
+  - enabled: 1
+    path: Assets/Scenes/PersonTest2.unity
+    guid: d556c554a2255cf43a5e3b6b2cf4200c
   m_configObjects: {}
