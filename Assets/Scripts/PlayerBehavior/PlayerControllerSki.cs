@@ -121,9 +121,9 @@ public class PlayerControllerSki : MonoBehaviour
                     Liam.AddForce(transform.forward * forwardForce);
                     //stick animation and sound here
                 }
+
                 if (RightControlSurface.Contains(touch.position))
                 {
-
                     Liam.AddTorque(0, -twistSpeed, 0);
                     Debug.Log("Right" + " Strength = " + forwardForce + " Speed = " + speed + " Distance = " + DragDistance + " Time = " + diffTime);
                     Liam.AddForce(transform.forward * forwardForce);
@@ -136,20 +136,8 @@ public class PlayerControllerSki : MonoBehaviour
                 }
             }
         }
-
-        
     }
 
-    void swipeToForce()
-    {
-        
-    }
-
-
-    void implementControl(float forwardForce)
-    {
-        
-    }
 
     void touchType()
     {
