@@ -12,6 +12,8 @@ public class PlayerControllerSki : MonoBehaviour
     public Rigidbody Liam;
     private Touch touch;
 
+    RaycastHit hit;
+
 
     //change aspects of control
     public float stabilizer = 100;
@@ -42,6 +44,9 @@ public class PlayerControllerSki : MonoBehaviour
     private bool upDown;
     private bool touchCheck;
 
+    //tester to check distance from ground
+    private float groundDistance;
+
 
     public float testBoost = 800;
 
@@ -57,7 +62,18 @@ public class PlayerControllerSki : MonoBehaviour
     void FixedUpdate()
     {
         //Liam.AddForce(transform.forward * testBoost);
-      
+
+
+
+        //keep the player stable at ground level
+        //groundDistance = Physics.Raycast(Liam.position, Vector3.down);
+        
+        if (Physics.Raycast(transform.position, -Vector3.down, out hit))
+        {
+            print("Found an object - distance: " + hit.distance);
+        }
+        
+
         if (Input.touchCount > 0) //check amount of touches
         {
             touchCheck = true;
@@ -112,8 +128,16 @@ public class PlayerControllerSki : MonoBehaviour
                     Debug.Log("Right" + " Strength = " + forwardForce + " Speed = " + speed + " Distance = " + DragDistance + " Time = " + diffTime);
                     Liam.AddForce(transform.forward * forwardForce);
                 }
+
+                if (Input.touchCount == 0)
+                {
+
+                    Debug.Log("Stopped");
+                }
             }
         }
+
+        
     }
 
     void swipeToForce()
