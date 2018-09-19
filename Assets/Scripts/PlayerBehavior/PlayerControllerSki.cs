@@ -58,86 +58,81 @@ public class PlayerControllerSki : MonoBehaviour
         RightControlSurface = new Rect(Screen.width / 2, 0, Screen.width / 2, Screen.height);
         //Touch touch = Input.GetTouch(0);
     }
-    
+
     void FixedUpdate()
     {
         //Liam.AddForce(transform.forward * testBoost);
 
-
-
         //keep the player stable at ground level
         //groundDistance = Physics.Raycast(Liam.position, Vector3.down);
-        
-        if (Physics.Raycast(transform.position, -Vector3.down, out hit))
-        {
-            print("Found an object - distance: " + hit.distance);
-        }
-        
+    }
 
+
+
+    void SwipeLength()
+    {
         if (Input.touchCount > 0) //check amount of touches
         {
             touchCheck = true;
+
             Debug.Log("Touch detected");
-            
-            foreach (Touch touch in Input.touches)
+            if (touch.phase == TouchPhase.Began)
             {
-                if (touch.phase == TouchPhase.Began)
-                {
-                    Vector2 startPos = touch.position;
-                    float startTime = Time.time;
-                    
-                }
+                Vector2 startPos = touch.position;
+                float startTime = Time.time;
 
-                if (touch.phase == TouchPhase.Ended)
-                {
-                    endPos = touch.position;
-                    diffTime = Time.time - startTime;
-                    startTime = 0;
-                    
-                }
-
-
-                float XDist = Mathf.Abs(startPos.x - endPos.x);
-                float YDist = Mathf.Abs(startPos.y - endPos.y);
-
-
-                //Pythagorean
-                float DragDistance = Mathf.Sqrt(XDist * XDist + YDist * YDist);
-
-
-                float speed = DragDistance / diffTime;
-
-
-                //Turn swipelength into force
-                float forwardForce = speed * DragDistance;
-                Debug.Log("Amount of force is" + forwardForce);
-
-
-
-                if (LeftControlSurface.Contains(touch.position))
-                {
-                    Liam.AddTorque(0, twistSpeed, 0);
-                    Debug.Log("Left" + "Strength = " + forwardForce + " Speed = " + speed + " Distance = " + DragDistance + " Time = " + diffTime);
-                    Liam.AddForce(transform.forward * forwardForce);
-                    //stick animation and sound here
-                }
-
-                if (RightControlSurface.Contains(touch.position))
-                {
-                    Liam.AddTorque(0, -twistSpeed, 0);
-                    Debug.Log("Right" + " Strength = " + forwardForce + " Speed = " + speed + " Distance = " + DragDistance + " Time = " + diffTime);
-                    Liam.AddForce(transform.forward * forwardForce);
-                }
-
-                if (Input.touchCount == 0)
-                {
-
-                    Debug.Log("Stopped");
-                }
             }
+
+            if (touch.phase == TouchPhase.Ended)
+            {
+                endPos = touch.position;
+                diffTime = Time.time - startTime;
+                startTime = 0;
+
+            }
+
+
+            float XDist = Mathf.Abs(startPos.x - endPos.x);
+            float YDist = Mathf.Abs(startPos.y - endPos.y);
+
+
+            //Pythagorean
+            float DragDistance = Mathf.Sqrt(XDist * XDist + YDist * YDist);
+
+
+            float speed = DragDistance / diffTime;
+
+
+            //Turn swipelength into force
+            float forwardForce = speed * DragDistance;
+            Debug.Log("Amount of force is" + forwardForce);
+        }
+
+
+    }       
+    void Application(float forwardForce)
+    {
+        if (LeftControlSurface.Contains(touch.position))
+        {
+            Liam.AddTorque(0, twistSpeed, 0);
+            Debug.Log("Left" + "Strength = " + forwardForce + " Speed = " + speed + " Distance = " + DragDistance + " Time = " + diffTime);
+            Liam.AddForce(transform.forward * forwardForce);
+            //stick animation and sound here
+        }
+
+        if (RightControlSurface.Contains(touch.position))
+        {
+            Liam.AddTorque(0, -twistSpeed, 0);
+            Debug.Log("Right" + " Strength = " + forwardForce + " Speed = " + speed + " Distance = " + DragDistance + " Time = " + diffTime);
+            Liam.AddForce(transform.forward * forwardForce);
+        }
+
+        if (Input.touchCount == 0)
+        {
+
+            Debug.Log("Stopped");
         }
     }
-
 
     void touchType()
     {
